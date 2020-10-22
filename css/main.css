@@ -32,6 +32,7 @@ body{
 }
 .header__logo {
 	flex: 0 0 100px;
+	user-select: none;
 }
 .header__logo img{
 	max-width: 100%;
@@ -44,6 +45,7 @@ body{
 	text-decoration: none;
     font-size: 16px;
 	color: #fff;
+	user-select: none;
 }
 .header__list{
 	display: flex;
@@ -55,6 +57,9 @@ body{
 	cursor: pointer;
 	margin-right: 30px;
 	align-items: center;
+}
+.header__list a:hover{
+	color: rgba( 255, 255, 255, 0.7);
 }
 .join-now{
  	margin-left: 55%;
@@ -80,6 +85,7 @@ body{
 	font-size: 24px;
 	font-weight: 400;
 	cursor: pointer;
+	user-select: none;
 }
 .join-button div{
 	margin: 5px;
@@ -90,7 +96,6 @@ body{
 }
 .content{
 	color: black;
-	height: 450px;
 }
 .content-text span{
 	font-size: 30px;
@@ -102,11 +107,20 @@ body{
 	font-weight: 300;
 	padding-bottom: 40px;
 	line-height: 1.9;
+	margin: 0;
 }
 .content-text{
   padding: 80px 4.5% 100px 7.5%;
   height: 100%;
   max-width: 900px;
+  position: relative;
+}
+.content-text::after{
+	background-image: url(../media/color-line.png);
+	position: absolute;
+	content: '';
+	width: 178px;
+	height: 32px;
 }
 .boxes{
 	min-height: 305px;
@@ -129,6 +143,45 @@ body{
 	font-weight: 400;
 	padding-left: 10px;
 }
+.title-box1::before{
+	background-image: url('../media/seo-icon.png');
+	position: absolute;
+	content: '';
+	height: 34px;
+	width: 28px;
+	left: -30px
+
+}
+.title-box1{
+	position: relative;
+	margin-left: 30px;
+}
+.title-box2::before{
+	background-image: url('../media/respons-icon.png');
+	position: absolute;
+	content: '';
+	height: 36px;
+	width: 36px;
+	left: -36px
+
+}
+.title-box2{
+	position: relative;
+	margin-left: 36px;
+}
+.title-box3::before{
+	background-image: url('../media/cloud-icon.png');
+	position: absolute;
+	content: '';
+	height: 27px;
+	width: 39px;
+	left: -39px
+
+}
+.title-box3{
+	position: relative;
+	margin-left: 39px;
+}
 .box p{
 	font-size: 14px;
 	font-weight: 300;
@@ -138,24 +191,24 @@ body{
 	float: right;
 	height: 37px;
 	width: 37px;
-	display: flex;
+	/*display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: center;*/
 	background-color: rgba(0, 0, 0, 0.3);
 	cursor: pointer;
+	text-align: center;
 }
 .plus-btn span{
 	font-size: 34px;
-	font-weight: 400;
+	font-weight: 400; 
+  	user-select: none; 
+  	line-height: 37px;
 }
 .plus-btn:hover{
 	background-color: rgba(255, 255, 255, 0.5);
 	color: rgba(0, 0, 0, 1);
 }
-.box-titleimg{
-	display: flex;
-	align-items: center;
-}
+
 .img-view-more{
 	background-image: url(../media/img-bgr.png);
 	height: 500px;
@@ -178,6 +231,7 @@ body{
 	font-size: 42px;
 	text-align: center;
 	padding-bottom: 40px;
+	max-width: 600px;
 }
 .btn-view{
 	text-decoration: none;
@@ -189,6 +243,7 @@ body{
 	font-size: 24px;
 	font-weight: 400;
 	cursor: pointer;
+	user-select: none;
 }
 .btn-view div{ 
 	margin: 5px 20px;
