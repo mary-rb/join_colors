@@ -65,6 +65,7 @@
 		transition: all 0.3s ease 0s;
 		overflow: auto;
 		user-select: none; 
+		z-index: 2;
 	}
 	.header__list{
 		display: block;
